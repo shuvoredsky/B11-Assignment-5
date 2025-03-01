@@ -11,7 +11,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-red-100">
+  <body id="body" class="bg-slate-100">
     <header>
       <nav>
         <div
@@ -35,12 +35,17 @@
                 name=""
                 id=""
               />
-              <h1 class="text-4xl">1</h1>
+              <h1 id="complete-task" class="text-4xl">20</h1>
             </div>
             <div
               class="h-16 w-16 bg-[#F4F7FF] justify-center items-center pt-3 pl-3 rounded-[50px]"
             >
-              <img class="cursor-pointer" src="assets/theme-btn.png" alt="" />
+              <img
+                id="change-theme-btn"
+                class="cursor-pointer"
+                src="assets/theme-btn.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -67,14 +72,14 @@
                 </div>
                 <div class="ml-2">
                   <h2 class="text-xl">Task Assigned</h2>
-                  <p class="text-3xl font-bold">06</p>
+                  <p id="task-assign" class="text-3xl font-bold">6</p>
                 </div>
               </div>
               <div
                 class="w-[524px] rounded-xl h-[128px] bg-gradient-to-tl from-[#9BA8F8] to-[#3752FD] flex justify-center items-center"
               >
                 <div><img src="assets/board.png" alt="" /></div>
-                <div class="text-2xl text-white mr-5">
+                <div id="ques" class="text-2xl text-white mr-5 cursor-pointer">
                   Discover Something <br />New Today!
                 </div>
               </div>
@@ -87,9 +92,11 @@
                   <img src="assets/calender.png" alt="" />
                 </div>
                 <div class="ml-2">
-                  <h2 class="text-xl">Wed ,</h2>
+                  <h2 class="text-xl"><span id="currentDate">Wed</span> ,</h2>
 
-                  <p class="text-2xl font-bold">Jul 28 2025</p>
+                  <p id="currnt-date-module" class="text-2xl font-bold">
+                    Jul 28 2025
+                  </p>
                 </div>
               </div>
             </div>
@@ -98,7 +105,7 @@
                 <div class="h-10 w-28 bg-white mt-4 ml-4">
                   <h3 class="text-[16px] pt-2 pl-4">ShopEase</h3>
                 </div>
-                <h1 class="text-2xl font-bold justify-center flex">
+                <h1 class="text-2xl font-bold justify-center flex box-title">
                   Fix Mobile Button Issue
                 </h1>
                 <div
@@ -130,7 +137,7 @@
                 <div class="h-10 w-28 bg-white mt-4 ml-4">
                   <h3 class="text-[16px] pt-2 pl-4">CloudSync</h3>
                 </div>
-                <h1 class="text-2xl font-bold justify-center flex">
+                <h1 class="text-2xl font-bold justify-center flex box-title">
                   Add Dark Modes
                 </h1>
                 <div
@@ -162,7 +169,7 @@
                 <div class="h-10 w-28 bg-white mt-4 ml-4">
                   <h3 class="text-[16px] pt-2 pl-4">SwiftPay</h3>
                 </div>
-                <h1 class="text-2xl font-bold justify-center flex">
+                <h1 class="text-2xl font-bold justify-center flex box-title">
                   Optimize Home page 
                 </h1>
                 <div
@@ -194,7 +201,7 @@
                 <div class="h-10 w-28 bg-white mt-4 ml-4">
                   <h3 class="text-[16px] pt-2 pl-4">Meta</h3>
                 </div>
-                <h1 class="text-2xl font-bold justify-center flex">
+                <h1 class="text-2xl font-bold justify-center flex box-title">
                   Add new emoji 🤲
                 </h1>
                 <div
@@ -226,7 +233,7 @@
                 <div class="h-10 w-28 bg-white mt-4 ml-4">
                   <h3 class="text-[16px] pt-2 pl-4">Google LLC</h3>
                 </div>
-                <h1 class="text-2xl font-bold justify-center flex">
+                <h1 class="text-2xl font-bold justify-center flex box-title">
                   Integrate OpenAI API
                 </h1>
                 <div
@@ -258,7 +265,7 @@
                 <div class="h-10 w-28 bg-white mt-4 ml-4">
                   <h3 class="text-[16px] pt-2 pl-4">Glassdoar</h3>
                 </div>
-                <h1 class="text-2xl font-bold justify-center flex">
+                <h1 class="text-2xl font-bold justify-center flex box-title">
                   Improve Job searching
                 </h1>
                 <div
@@ -288,22 +295,31 @@
               </div>
             </div>
           </div>
-          <div class="w-[366px] h-[918px] bg-white mt-5">
-            <div class="flex justify-center items-center mt-7">
-              <div><img src="assets/activity.png" alt="" /></div>
-              <div><h2 class="text-xl">Activity Log</h2></div>
+          <section>
+            <div
+              id="add-clear-history"
+              class="w-[366px] h-[918px] bg-white mt-5"
+            >
+              <div class="flex justify-center items-center">
+                <div><img class="mt-5" src="assets/activity.png" alt="" /></div>
+                <div>
+                  <h2 class="text-xl font-bold mt-5 ml-3">Activity Log</h2>
+                </div>
+              </div>
+              <div class="mt-4 text-center">
+                <button
+                  class="bg-blue-600 w-36 h-11 font-bold text-white rounded-xl"
+                >
+                  Clear History
+                </button>
+              </div>
+              <!-- add history -->
             </div>
-            <div class="mt-4 text-center">
-              <button
-                class="bg-blue-600 w-36 h-11 font-bold text-white rounded-xl"
-              >
-                Clear History
-              </button>
-            </div>
-          </div>
+          </section>
         </div>
       </section>
     </main>
     <script src="script/script.js"></script>
+    <script src="script/secJs.js"></script>
   </body>
 </html>
