@@ -11,6 +11,9 @@ const colors = [
   "bg-black-100",
   "bg-red-100",
 ];
+document.getElementById("backBtn").addEventListener("click", function () {
+  window.location = "./index.html";
+});
 document
   .getElementById("change-theme-btn")
   .addEventListener("click", function () {
@@ -18,9 +21,4 @@ document
     body.classList.remove(...colors);
     const themeColor = colors[Math.floor(Math.random() * colors.length)];
     body.classList.add(themeColor);
-  });
-document
-  .getElementsByClassName("backBtn")
-  .addEventListener("click", function () {
-    console.log("click");
   });
