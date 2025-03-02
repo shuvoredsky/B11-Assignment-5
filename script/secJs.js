@@ -11,9 +11,7 @@ const colors = [
   "bg-black-100",
   "bg-red-100",
 ];
-document.getElementById("backBtn").addEventListener("click", function () {
-  window.location = "./index.html";
-});
+
 document
   .getElementById("change-theme-btn")
   .addEventListener("click", function () {
