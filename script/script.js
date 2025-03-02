@@ -13,13 +13,15 @@ for (let i = 0; i < completeBtns.length; i++) {
     );
     completeBtn.disabled = true;
     const boxTitles = document.querySelectorAll("h1.box-title");
-  
+
+    // if(completeBtn === completeBtns.length-1){
+    //   alert('congrates!!! You have completed all the current task.');
+    // }
+
+
 
 const parentNode= event.target.parentNode.parentNode.parentNode.children[1].innerText;
 
-
-
-    
 const currentDate = new Date();
 const dayOfWeek = currentDate.getDay();
 const year = currentDate.getFullYear();
@@ -67,7 +69,9 @@ document.getElementById('clear-hitory-btn').addEventListener('click', function()
   }
 })
 
-
+document.getElementById("finish-btn").addEventListener("click", function () {
+  alert('congrates!!! You have completed all the current task.');
+});
 
 
 document.getElementById("ques").addEventListener("click", function () {
