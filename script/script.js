@@ -4,20 +4,20 @@ const boxTitles = document.querySelectorAll(".box-title");
 
 for (let i = 0; i < completeBtns.length; i++) {
   const completeBtn = completeBtns[i];
+  
   completeBtn.addEventListener("click", function (event) {
     const taskAssigned = parseInt(
       document.getElementById("task-assign").innerText
     );
+    console.log(taskAssigned)
+    
     const completeTask = parseInt(
       document.getElementById("complete-task").innerText
     );
     completeBtn.disabled = true;
     const boxTitles = document.querySelectorAll("h1.box-title");
-
-    // if(completeBtn === completeBtns.length-1){
-    //   alert('congrates!!! You have completed all the current task.');
-    // }
-
+    
+    
 
 
 const parentNode= event.target.parentNode.parentNode.parentNode.children[1].innerText;
@@ -38,7 +38,7 @@ const options = {
 
 const timeString = currentDate.toLocaleString('en-US', options);
 
-// {/* <span>${timeString}</span> */}
+
     const addClearHistory = document.getElementById("add-clear-history");
 
     const div = document.createElement("div");
@@ -57,21 +57,22 @@ const timeString = currentDate.toLocaleString('en-US', options);
     document.getElementById("task-assign").innerText = minus;
     alert("Board Update Successfully");
 
-    // event.target.completeBtn.disabled = true;
+    if(taskAssigned === 1){
+      alert('congrates!!! You have completed all the current task.');
+    }
+
+    
     event.target.classList.add("bg-gray-400", "cursor-not-allowed");
   });
 }
 document.getElementById('clear-hitory-btn').addEventListener('click', function(){
   const addClearHistory = document.getElementById("clearAllHistory");
-  // addClearHistory.classList.add('hidden')
+  
   if(addClearHistory){
     addClearHistory.remove();
   }
 })
 
-document.getElementById("finish-btn").addEventListener("click", function () {
-  alert('congrates!!! You have completed all the current task.');
-});
 
 
 document.getElementById("ques").addEventListener("click", function () {
